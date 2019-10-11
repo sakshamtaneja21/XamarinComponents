@@ -22,7 +22,7 @@ Task("samples")
 	.IsDependentOn("nuget")
 	.Does(() =>
 {
-	MSBuild("./samples/ITSwitchSample.sln", new MSBuildSettings()
+	MSBuild("./samples/ITSwitchSample/ITSwitchSample.sln", new MSBuildSettings()
 		.EnableBinaryLogger("./output/samples.binlog")
 		.SetConfiguration("Release")
 		.WithRestore());
