@@ -19,6 +19,7 @@ jobs:
     parameters:
       timeoutInMinutes: 360
       buildType: 'directories'
+      targetsFilter: 'ci'
       validPackagePrefixes: 
         # Preferred prefixes
         - Xamarin
