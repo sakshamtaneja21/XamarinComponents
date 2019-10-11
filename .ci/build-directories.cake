@@ -1,5 +1,4 @@
 #addin nuget:?package=Cake.XCode&version=4.1.0
-#addin nuget:?package=Cake.Json&version=4.0.0&loadDependencies=true
 #addin nuget:?package=redth.xunit.resultwriter&version=1.0.0
 
 
@@ -32,6 +31,7 @@ var POD_REPO_UPDATE = Argument("update", Argument("repo-update", Argument("pod-r
 var BUILD_GROUPS = GetFiles($"{ROOT_DIR}/*/**/build.cake")
 	.Select(g => ROOT_DIR.GetRelativePath(g.GetDirectory()))
 	.OrderBy(g => g.FullPath.ToLower());
+
 
 // SECTION: Main Script
 
